@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Website</title>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css">
+        <link href="CSS/index.css" rel="stylesheet" type="text/css">
+        <link href="CSS/side_nav.css" rel="stylesheet" type="text/css">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+		rel="stylesheet">
+
+        <title>🏠 Nikrp - Home Page</title>
     </head>
 
     <body>
         <header>
+            <!-- Side Navigation -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" 
+                onclick="closeNav()">&times;</a>
+                <a href="index.html" class="page">
+                    Home
+                </a>
+                
+                <a href="about_me.html" class="page">
+                    About Me
+                </a>
+
+                <a href="index.html" class="page">
+                    Place Holder
+                </a>
+
+                <a href="https://sites.google.com/cusdk8.org/nikhilpellakuruportfolio/home?authuser=1" 
+                target="_blank" class="page">
+                    My Blog
+                </a>
+            </div>
+
+            <p>
+                <span style="font-size:30px;cursor:pointer" 
+                onclick="openNav()" class="side-bar">&#9776; Pages</span>
+                <!-- Side Navigation End -->
+            </p>
         </header>
 
         <section>
-            <h1 style="color:aqua;">Links</h1>
-            <a href="https://nikrp.blogspot.com/" target="_blank">My Blog</a>
-            <hr>
         </section>
 
         <footer>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>
