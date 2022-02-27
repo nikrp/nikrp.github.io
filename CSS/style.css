@@ -3,3 +3,19 @@
     background-color: #333;
     color: white;
 }
+
+.title {
+    text-align: center;
+}
+
+hr {
+    border: 6px dashed orange;
+}
+
+a {
+    color: aqua;
+}
+a:hover {
+    color: orange;
+    transition: ease-in;
+}

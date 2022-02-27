@@ -1,24 +1,81 @@
 <!DOCTYPE html>
-
 <html>
     <head>
+        <link href="CSS/style.css" rel="stylesheet" type="text/css">
+        <link href="CSS/about_me.css" rel="stylesheet" type="text/css">
+        <link href="CSS/side_nav.css" rel="stylesheet" type="text/css">
 
-        <link rel="stylesheet" href="resume.css">
+        <meta charset="utf-8">
 
-        <title>🧠 About Me</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Itim&display=swap"
+		rel="stylesheet">
+
+        <title>🧠 Nikrp - About Me</title>
     </head>
 
     <body>
-        <strong>
-            <header>
-                <h1>About Me</h1>
-            </header>
+        <header>
+            <!-- Side Navigation -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" 
+                onclick="closeNav()">&times;</a>
+                <a href="index.html" class="page">
+                    Home
+                </a>
+                
+                <a href="about_me.html" class="page">
+                    About Me
+                </a>
 
-            <section>
-            </section>
+                <a href="index.html" class="page">
+                    Coming Soon
+                </a>
 
-            <footer>
-            </footer>
-        </strong>
+                <a href="https://nikrp.blogspot.com" 
+                target="_blank" class="page">
+                    My Blog
+                </a>
+            </div>
+
+            <p>
+                <span style="font-size:30px;cursor:pointer" 
+                onclick="openNav()" class="side-bar">&#9776; Pages</span>
+            </p>
+            <!-- Side Navigation End -->
+            
+            <h1 class="title">About Me</h1>
+            <hr>
+        </header>
+
+        <section>
+            <!-- Profile Picture & Link to Youtube Cannel-->
+            <div class="profile">
+                <img src="Images\profile.jpg" alt="Profile Pic"><br>
+                <a href="https://www.youtube.com/channel/UCtfhF4fqy4gDOnocsp3dWRg" target="_blank">Visit Me</a>
+            </div>
+            <hr>
+            <!--Things I'm Good At-->
+            <h2>Coding:</h2>
+            <ol>
+                <li>HTML 🌟🌟🌟</li>
+                <li>CSS 🌟🌟🌟</li>
+                <li>Python 🌟🌟🌟🌟</li>
+                <li>JS ❌</li>
+            </ol>
+
+            <!--Just Stuff About Me-->
+            <h2>Things I Like:</h2>
+            <ol>
+                <li>Coding</li>
+                <li></li>
+            </ol>
+        </section>
+
+        <footer>
+        </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>
