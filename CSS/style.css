@@ -19,3 +19,7 @@ a:hover {
     color: orange;
     transition: ease-in;
 }
+
+p {
+    font-size: 20px;
+}
