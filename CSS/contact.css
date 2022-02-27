@@ -3,3 +3,21 @@
     margin-left: 650px;
     margin-bottom: 30px;
 }
+
+.info {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 20px;
+}
+  
+td, th {
+    border: 10px solid #000000;
+    border-color: red;
+    text-align: left;
+    padding: 8px;
+}
+  
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
