@@ -33,11 +33,3 @@ ol {
         font-size: 12pt;
     }
 }
-
-@media screen and (min-width: 40em) {
-    * {
-        display: grid;
-        grid-template-columns: 3fr 1fr;
-        column-gap: 20px;
-    }
-}
