@@ -1,0 +1,26 @@
+* {
+	font-family: 'Itim', cursive;
+	background-color: #333;
+	color: white;
+}
+
+hr {
+  border: 4px orange dashed;
+}
+
+a {
+    color: aqua;
+}
+
+a:hover {
+    color: orangered;
+}
+
+p {
+  font-size: 20px;
+}
+
+.closebtn {
+  color: white;
+  font-size: 10px;
+}
