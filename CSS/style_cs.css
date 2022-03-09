@@ -5,7 +5,7 @@
 }
 
 hr {
-  border: 4px orange dashed;
+  border: 4px lawngreen dashed;
 }
 
 a {
@@ -20,7 +20,19 @@ p {
   font-size: 20px;
 }
 
+blockquote {
+  font-size: 20px;
+}
+
+ul {
+  font-size: 20px;
+}
+
 .closebtn {
   color: white;
   font-size: 10px;
+}
+
+.small-hr {
+  width: 5%;
 }
