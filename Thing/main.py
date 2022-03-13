@@ -1,38 +1,44 @@
+# Imports
 from bs4 import BeautifulSoup
 import requests
-from os import chdir
+import os
 
-""" with open("website.html", encoding="utf-8") as file:
-    contents = file.read()
+# Change the directory to ./Thing
+os.chdir("./Thing")
 
-soup = BeautifulSoup(contents, "html.parser")
-
- """
-
-response = requests.get("https://news.ycombinator.com/")
+# Request the code from the website
+response = requests.get("https://www.empireonline.com/movies/features/best-movies-2/")
 response.raise_for_status()
-ycWebpage = response.text
+empireMovieTxt = response.text
 
-soup = BeautifulSoup(ycWebpage, "html.parser")
-articles = soup.find_all(name="a", class_="titlelink")
-articleTexts = []
-articleLinks = []
-for articleTag in articles:
-    articleText = articleTag.getText()
-    articleTexts.append(articleText)
-    articleLink = articleTag.get("href")
-    articleLinks.append(articleLink)
-    
-articleUpvotes = [int(score.getText().split()[0]) for score in soup.find_all(name="span", class_="score")]
+# Create my soup
+soup = BeautifulSoup(empireMovieTxt, "html.parser")
 
-maxUpvotesIndex = articleUpvotes.index(max(articleUpvotes))
-articleLinks.remove(articleLinks[len(articleLinks) - 1])
-print(articleTexts[maxUpvotesIndex])
-print(articleLinks[maxUpvotesIndex])
-print(articleUpvotes[maxUpvotesIndex])
+# Get all the tags where the titles reside
+imgAlt = soup.find_all(name="img", class_="jsx-952983560 loading")
+imgAltList = []
 
-# print(articleTexts)
-# print("\n\n\n\n\n")
-# print(articleUpvotes)
-# print("\n\n\n\n\n")
-# print(articleLinks)
+# Get all the titles into a list
+for tag in imgAlt:
+    alt = tag.get("alt")
+    imgAltList.append(alt)
+
+# Count settings
+count = soup.find_all(name="span", class_="jsx-4245974604 listicle-item-count")
+newCount = []
+for place in count:
+    countList = place.getText().split(" of ")
+    newCount.append(countList[0])
+
+# Make and fill the dictionary with rank and title as key and value
+movieNumNameDict = {}
+for num in newCount:
+    movieNumNameDict[num] = imgAltList[newCount.index(num)]
+
+# Add everything to file
+file = open("movies.txt", "w", encoding="utf8")
+for (key, value) in movieNumNameDict.items():
+    name = f"{key}) {value}"
+    print(name)
+    file.write(f"{name}\n")
+file.close()
