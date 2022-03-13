@@ -2,8 +2,6 @@ from bs4 import BeautifulSoup
 import requests
 from os import chdir
 
-chdir("./Thing")
-
 """ with open("website.html", encoding="utf-8") as file:
     contents = file.read()
 
